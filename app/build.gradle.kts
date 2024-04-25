@@ -54,10 +54,10 @@ android {
 
 dependencies {
     implementation("com.google.dagger:hilt-android:2.44")
+    implementation(libs.firebase.auth.ktx)
     kapt("com.google.dagger:hilt-android-compiler:2.44")
 
     implementation(libs.firebase.bom)
-    //noinspection UseTomlInstead
     implementation("com.google.firebase:firebase-auth")
 
     implementation(libs.androidx.core.ktx)
