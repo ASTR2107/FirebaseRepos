@@ -1,4 +1,4 @@
-package com.example.firebaseauthentification.model
+package com.example.firebaseauthentification.domain.repository.model
 
 data class UserModel(
     var userId: String? = null,

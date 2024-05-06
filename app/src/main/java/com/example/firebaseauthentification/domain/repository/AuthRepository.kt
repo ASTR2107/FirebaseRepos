@@ -1,7 +1,7 @@
 package com.example.firebaseauthentification.domain.repository
 
-import com.example.firebaseauthentification.model.NetworkResult
-import com.example.firebaseauthentification.model.UserModel
+import com.example.firebaseauthentification.domain.repository.model.NetworkResult
+import com.example.firebaseauthentification.domain.repository.model.UserModel
 import kotlinx.coroutines.flow.Flow
 
 interface AuthRepository {
