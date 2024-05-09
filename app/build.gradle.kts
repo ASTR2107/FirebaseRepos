@@ -53,14 +53,12 @@ android {
 }
 
 dependencies {
-    implementation("com.google.dagger:hilt-android:2.44")
-    kapt("com.google.dagger:hilt-android-compiler:2.44")
+    implementation(libs.hilt.android)
+    kapt(libs.hilt.android.compiler)
 
-    //noinspection UseTomlInstead
     implementation("com.google.firebase:firebase-firestore")
     implementation(libs.firebase.auth.ktx)
     implementation(platform(libs.firebase.bom))
-    //noinspection UseTomlInstead
     implementation("com.google.firebase:firebase-auth")
 
     implementation(libs.androidx.core.ktx)
@@ -79,4 +77,7 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+}
+kapt {
+    correctErrorTypes = true
 }
