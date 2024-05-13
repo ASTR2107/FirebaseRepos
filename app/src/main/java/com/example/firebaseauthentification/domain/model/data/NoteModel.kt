@@ -1,6 +1,4 @@
-package com.example.firebaseauthentification.domain.repository.model
-
-import java.time.LocalDate
+package com.example.firebaseauthentification.domain.model.data
 
 data class NoteModel(
     val id: String,

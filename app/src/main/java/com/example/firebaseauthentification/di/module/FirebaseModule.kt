@@ -1,6 +1,6 @@
 package com.example.firebaseauthentification.di.module
 
-import com.example.firebaseauthentification.domain.repository.AuthRepositoryImpl
+import com.example.firebaseauthentification.domain.model.repository.AuthRepositoryImpl
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import dagger.Module

@@ -1,4 +1,4 @@
-package com.example.firebaseauthentification.domain.repository.model
+package com.example.firebaseauthentification.domain.model.data
 
 sealed class NetworkResult<T> (
     val data: T? = null,
