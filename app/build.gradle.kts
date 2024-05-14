@@ -53,6 +53,8 @@ android {
 }
 
 dependencies {
+    implementation (libs.androidx.lifecycle.viewmodel.compose)
+
     implementation("androidx.datastore:datastore-preferences:1.1.1")
 
 
@@ -80,6 +82,9 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
+
+
 }
 kapt {
     correctErrorTypes = true
