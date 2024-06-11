@@ -53,18 +53,23 @@ android {
 }
 
 dependencies {
-    implementation (libs.androidx.lifecycle.viewmodel.compose)
+    implementation(libs.androidx.lifecycle.viewmodel.compose)
 
     implementation("androidx.datastore:datastore-preferences:1.1.1")
 
-
+//Hilt
     implementation(libs.hilt.android)
+    implementation(libs.androidx.navigation.safe.args.generator)
+    implementation(libs.transport.runtime)
+    implementation(libs.androidx.navigation.runtime.ktx)
     kapt(libs.hilt.android.compiler)
-
+    implementation(libs.androidx.hilt.navigation.compose)
+//Firebase
     implementation("com.google.firebase:firebase-firestore")
     implementation(libs.firebase.auth.ktx)
     implementation(platform(libs.firebase.bom))
     implementation("com.google.firebase:firebase-auth")
+    implementation("com.google.android.gms:play-services-auth:19.0.0")
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
@@ -82,7 +87,6 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
-
 
 
 }

@@ -1,7 +1,6 @@
 package com.example.firebaseauthentification.domain.model.data
 
-import androidx.compose.ui.graphics.Color
-import com.example.firebaseauthentification.ui.theme.Green
+import androidx.compose.ui.graphics.Color.Companion.Green
 
 data class SettingsData(
     val textSize: Int = 40,

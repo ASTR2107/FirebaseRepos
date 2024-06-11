@@ -1,34 +1,39 @@
 package com.example.firebaseauthentification.view
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.Surface
-import androidx.compose.runtime.collectAsState
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
-import com.example.firebaseauthentification.domain.model.data.SettingsData
+import androidx.compose.material3.DrawerValue
+import androidx.compose.material3.rememberDrawerState
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import com.example.firebaseauthentification.domain.model.repository.SaveViewSettingsImpl
+import com.example.firebaseauthentification.ui.theme.FirebaseAuthentificationTheme
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
+    @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val saveViewSettingsImpl = SaveViewSettingsImpl(this)
         setContent {
-            val settingsState = saveViewSettingsImpl
-                .getSettings()
-                .collectAsState(initial = SettingsData)
-            Surface(
-                modifier = Modifier.fillMaxSize(),
-                color = Color(settingsState.value.bgColor)
-            ) {
+            val drawerState = rememberDrawerState(DrawerValue.Closed)
+            val scope = rememberCoroutineScope()
+            val topBarTitle = remember {
+                mutableStateOf("")
+            }
+            FirebaseAuthentificationTheme {
+                MainTopBar()
+                NavDrawer()
+
 
             }
-            MainViewScreen(saveViewSettingsImpl, settingsState.value.textSize)
         }
+
     }
 }
+
 
