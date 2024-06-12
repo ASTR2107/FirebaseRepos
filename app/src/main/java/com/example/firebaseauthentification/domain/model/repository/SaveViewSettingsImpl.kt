@@ -1,14 +1,13 @@
 package com.example.firebaseauthentification.domain.model.repository
 
 import android.content.Context
+import androidx.compose.ui.graphics.Color.Companion.White
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.intPreferencesKey
 import androidx.datastore.preferences.preferencesDataStore
 import com.example.firebaseauthentification.domain.model.data.SettingsData
-import com.example.firebaseauthentification.ui.theme.Blue
-import com.example.firebaseauthentification.ui.theme.White
 import kotlinx.coroutines.flow.map
 
 class SaveViewSettingsImpl(private val context: Context) : SaveViewSettings {

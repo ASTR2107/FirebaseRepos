@@ -9,8 +9,10 @@ import androidx.compose.material3.rememberDrawerState
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.example.firebaseauthentification.domain.model.repository.SaveViewSettingsImpl
 import com.example.firebaseauthentification.ui.theme.FirebaseAuthentificationTheme
+import com.example.firebaseauthentification.view.login.LogInScreen
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -19,6 +21,9 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val saveViewSettingsImpl = SaveViewSettingsImpl(this)
+        installSplashScreen().apply {
+
+        }
         setContent {
             val drawerState = rememberDrawerState(DrawerValue.Closed)
             val scope = rememberCoroutineScope()
@@ -26,8 +31,7 @@ class MainActivity : ComponentActivity() {
                 mutableStateOf("")
             }
             FirebaseAuthentificationTheme {
-                MainTopBar()
-                NavDrawer()
+                LogInScreen()
 
 
             }

@@ -52,9 +52,11 @@ android {
     }
 }
 
-dependencies {
-    implementation(libs.androidx.lifecycle.viewmodel.compose)
 
+dependencies {
+    implementation(libs.androidx.core.splashscreen)
+
+    implementation(libs.androidx.lifecycle.viewmodel.compose)
     implementation("androidx.datastore:datastore-preferences:1.1.1")
 
 //Hilt
@@ -70,6 +72,8 @@ dependencies {
     implementation(platform(libs.firebase.bom))
     implementation("com.google.firebase:firebase-auth")
     implementation("com.google.android.gms:play-services-auth:19.0.0")
+
+    implementation(libs.androidx.navigation.compose)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)

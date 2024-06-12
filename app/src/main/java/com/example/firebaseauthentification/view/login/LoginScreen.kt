@@ -36,12 +36,14 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.navigation.NavController
 import com.example.firebaseauthentification.R
 import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun LogInScreen(
+    navController: NavController,
     viewModel: MyViewModel = hiltViewModel()
 ) {
     val sheetState = rememberModalBottomSheetState()

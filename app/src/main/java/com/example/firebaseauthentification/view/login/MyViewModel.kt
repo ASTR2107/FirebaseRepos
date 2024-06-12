@@ -1,5 +1,6 @@
 package com.example.firebaseauthentification.view.login
 
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.firebaseauthentification.domain.model.data.NetworkResult
@@ -16,12 +17,14 @@ class MyViewModel @Inject constructor(
 ) : ViewModel() {
     val _firebaseLogInState = Channel<LogInState>()
     val logInState = _firebaseLogInState.receiveAsFlow()
+    val userLogged = MutableLiveData<Boolean>(false)
 
     fun loginUser(email: String, password: String) = viewModelScope.launch {
         repository.firebaseLogIn(email, password).collect{result ->
            when(result){
+
                is NetworkResult.Success -> {
-                   _firebaseLogInState.send(LogInState(isSuccess = "Sign in Success"))
+                   _firebaseLogInState.send(LogInState(isSuccess = ""))
                }
                is NetworkResult.Loading -> {
                    _firebaseLogInState.send(LogInState(isLoading = true ))
