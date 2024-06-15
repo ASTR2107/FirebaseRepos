@@ -2,9 +2,11 @@ package com.example.firebaseauthentification.domain.model.repository
 
 import android.annotation.SuppressLint
 import android.util.Log
+import androidx.navigation.NavController
 import com.example.firebaseauthentification.domain.model.data.NetworkResult
 import com.example.firebaseauthentification.domain.model.data.UserModel
 import com.example.firebaseauthentification.utils.Constants
+import com.example.firebaseauthentification.ui.theme.navigation.Screens
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.coroutines.flow.Flow
@@ -70,12 +72,14 @@ class AuthRepositoryImpl @Inject constructor(
         return flow {
             var isSuccess = false
             emit(NetworkResult.Loading())
+            var navController: NavController
 
             try {
                 auth.signInWithEmailAndPassword(email, password)
                     .addOnCompleteListener { task ->
                         isSuccess = if (task.isSuccessful) {
                             Log.d(TAG, "singWithEmailPassword:: success")
+                                Screens.HomeScreens.route
                             auth.currentUser != null
                         } else {
                             Log.d(TAG, "singWithEmailPassword:: failure", task.exception)

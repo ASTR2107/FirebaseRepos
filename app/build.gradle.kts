@@ -64,14 +64,18 @@ dependencies {
     implementation(libs.androidx.navigation.safe.args.generator)
     implementation(libs.transport.runtime)
     implementation(libs.androidx.navigation.runtime.ktx)
+    implementation(libs.androidx.media3.exoplayer)
     kapt(libs.hilt.android.compiler)
     implementation(libs.androidx.hilt.navigation.compose)
 //Firebase
-    implementation("com.google.firebase:firebase-firestore")
+    implementation(libs.google.firebase.firestore)
     implementation(libs.firebase.auth.ktx)
     implementation(platform(libs.firebase.bom))
-    implementation("com.google.firebase:firebase-auth")
-    implementation("com.google.android.gms:play-services-auth:19.0.0")
+    implementation(libs.firebase.auth)
+    implementation("com.google.android.gms:play-services-auth:21.2.0")
+
+    implementation(libs.accompanist.systemuicontroller)
+    implementation(libs.androidx.media3.ui)
 
     implementation(libs.androidx.navigation.compose)
 
