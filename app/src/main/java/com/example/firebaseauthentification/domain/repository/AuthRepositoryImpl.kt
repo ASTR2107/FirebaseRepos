@@ -1,12 +1,12 @@
-package com.example.firebaseauthentification.domain.model.repository
+package com.example.firebaseauthentification.domain.repository
 
 import android.annotation.SuppressLint
 import android.util.Log
 import androidx.navigation.NavController
-import com.example.firebaseauthentification.domain.model.data.NetworkResult
-import com.example.firebaseauthentification.domain.model.data.UserModel
+import com.example.firebaseauthentification.utils.NetworkResult
+import com.example.firebaseauthentification.domain.model.model.data.UserModel
 import com.example.firebaseauthentification.utils.Constants
-import com.example.firebaseauthentification.ui.theme.navigation.Screens
+import com.example.firebaseauthentification.view.theme.navigation.Screens
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.coroutines.flow.Flow

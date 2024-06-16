@@ -1,4 +1,4 @@
-package com.example.firebaseauthentification.ui.theme
+package com.example.firebaseauthentification.view.theme
 
 import android.graphics.Path
 import androidx.compose.ui.geometry.Offset

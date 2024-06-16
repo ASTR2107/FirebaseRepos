@@ -1,4 +1,4 @@
-package com.example.firebaseauthentification.ui.theme.navigation
+package com.example.firebaseauthentification.view.theme.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost

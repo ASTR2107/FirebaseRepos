@@ -4,9 +4,8 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.navigation.NavController
-import com.example.firebaseauthentification.domain.model.data.NetworkResult
-import com.example.firebaseauthentification.domain.model.repository.AuthRepository
-import com.example.firebaseauthentification.use_case.login.login.LogInState
+import com.example.firebaseauthentification.utils.NetworkResult
+import com.example.firebaseauthentification.domain.repository.AuthRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.receiveAsFlow

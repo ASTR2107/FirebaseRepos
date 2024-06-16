@@ -19,7 +19,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.example.firebaseauthentification.domain.model.data.Book
+import com.example.firebaseauthentification.domain.model.model.data.Book
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 

@@ -1,4 +1,4 @@
-package com.example.firebaseauthentification.domain.model.data
+package com.example.firebaseauthentification.domain.model.model.data
 
 data class Podcast(
     val name: String,

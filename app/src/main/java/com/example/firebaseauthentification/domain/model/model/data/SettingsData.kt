@@ -1,4 +1,4 @@
-package com.example.firebaseauthentification.domain.model.data
+package com.example.firebaseauthentification.domain.model.model.data
 
 import androidx.compose.ui.graphics.Color.Companion.Green
 

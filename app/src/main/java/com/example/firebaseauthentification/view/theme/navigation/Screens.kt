@@ -1,4 +1,4 @@
-package com.example.firebaseauthentification.ui.theme.navigation
+package com.example.firebaseauthentification.view.theme.navigation
 
 sealed class Screens(val route: String) {
     object LogInScreen: Screens(route = "LogIn_Screen")

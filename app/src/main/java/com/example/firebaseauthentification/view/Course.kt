@@ -47,27 +47,27 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.example.firebaseauthentification.R
-import com.example.firebaseauthentification.domain.model.data.BottomMenuContent
-import com.example.firebaseauthentification.domain.model.data.Course
-import com.example.firebaseauthentification.ui.theme.Beige1
-import com.example.firebaseauthentification.ui.theme.Beige2
-import com.example.firebaseauthentification.ui.theme.Beige3
-import com.example.firebaseauthentification.ui.theme.Blue1
-import com.example.firebaseauthentification.ui.theme.Blue2
-import com.example.firebaseauthentification.ui.theme.Blue3
-import com.example.firebaseauthentification.ui.theme.Green1
-import com.example.firebaseauthentification.ui.theme.Green10
-import com.example.firebaseauthentification.ui.theme.Green2
-import com.example.firebaseauthentification.ui.theme.Green20
-import com.example.firebaseauthentification.ui.theme.Green3
-import com.example.firebaseauthentification.ui.theme.Orange1
-import com.example.firebaseauthentification.ui.theme.Orange2
-import com.example.firebaseauthentification.ui.theme.Orange3
-import com.example.firebaseauthentification.ui.theme.PurpleGrey40
-import com.example.firebaseauthentification.ui.theme.PurpleGrey80
-import com.example.firebaseauthentification.ui.theme.Violet1
-import com.example.firebaseauthentification.ui.theme.Violet2
-import com.example.firebaseauthentification.ui.theme.Violet3
+import com.example.firebaseauthentification.domain.model.model.data.BottomMenuContent
+import com.example.firebaseauthentification.domain.model.model.data.Course
+import com.example.firebaseauthentification.view.theme.Beige1
+import com.example.firebaseauthentification.view.theme.Beige2
+import com.example.firebaseauthentification.view.theme.Beige3
+import com.example.firebaseauthentification.view.theme.Blue1
+import com.example.firebaseauthentification.view.theme.Blue2
+import com.example.firebaseauthentification.view.theme.Blue3
+import com.example.firebaseauthentification.view.theme.Green1
+import com.example.firebaseauthentification.view.theme.Green10
+import com.example.firebaseauthentification.view.theme.Green2
+import com.example.firebaseauthentification.view.theme.Green20
+import com.example.firebaseauthentification.view.theme.Green3
+import com.example.firebaseauthentification.view.theme.Orange1
+import com.example.firebaseauthentification.view.theme.Orange2
+import com.example.firebaseauthentification.view.theme.Orange3
+import com.example.firebaseauthentification.view.theme.PurpleGrey40
+import com.example.firebaseauthentification.view.theme.PurpleGrey80
+import com.example.firebaseauthentification.view.theme.Violet1
+import com.example.firebaseauthentification.view.theme.Violet2
+import com.example.firebaseauthentification.view.theme.Violet3
 
 @Composable
 fun HomeScreens(
@@ -202,7 +202,6 @@ fun BottomMenuItem(
 
 
 @Composable
-
 @Preview(showBackground = true)
 fun GreetingSection(
     name: String = "Geeks"

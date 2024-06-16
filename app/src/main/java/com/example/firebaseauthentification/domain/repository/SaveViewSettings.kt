@@ -1,6 +1,6 @@
-package com.example.firebaseauthentification.domain.model.repository
+package com.example.firebaseauthentification.domain.repository
 
-import com.example.firebaseauthentification.domain.model.data.SettingsData
+import com.example.firebaseauthentification.domain.model.model.data.SettingsData
 import kotlinx.coroutines.flow.Flow
 
 interface SaveViewSettings {
